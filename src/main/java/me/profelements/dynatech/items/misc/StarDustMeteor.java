@@ -41,7 +41,7 @@ public class StarDustMeteor extends UnplaceableBlock implements GEOResource {
     @Nonnull
     @Override
     public ItemStack getItem() {
-      return STARDUST_METEOR.clone();
+      return STARDUST_METEOR.item().clone();
     }
   
     @Nonnull

@@ -220,7 +220,7 @@ public class Tesseract extends SlimefunItem implements EnergyNetProvider {
         preset.drawBackground(ChestMenuUtils.getInputSlotTexture(), getInputBorder());
         preset.drawBackground(ChestMenuUtils.getOutputSlotTexture(), getOutputBorder());
         preset.addItem(
-                4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&fKnowledge Pane",
+                4, CustomItemStack.create(Material.PURPLE_STAINED_GLASS_PANE, "&fKnowledge Pane",
                         "&fCurrent Power: Unknown", "&fCurrent Status: NOT CONNECTED"),
                 ChestMenuUtils.getEmptyClickHandler());
     }

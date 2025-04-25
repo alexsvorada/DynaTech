@@ -241,7 +241,7 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
     public void constructMenu(BlockMenuPreset preset) {
         preset.drawBackground(ChestMenuUtils.getOutputSlotTexture(), getBorder());
         preset.addItem(
-                4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&fKnowledge Pane",
+                4, CustomItemStack.create(Material.PURPLE_STAINED_GLASS_PANE, "&fKnowledge Pane",
                         "&fCurrent Power: Unknown", "&fCurrent Status: NOT CONNECTED"),
                 ChestMenuUtils.getEmptyClickHandler());
     }

@@ -94,7 +94,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.20.6-R0.1-SNAPSHOT</version>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -106,7 +106,7 @@
 	    <dependency>
 	        <groupId>com.github.Slimefun</groupId>
 	        <artifactId>Slimefun4</artifactId>
-	        <version>d12ae8580b</version>
+	        <version>experimental-SNAPSHOT</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -124,7 +124,7 @@
         <dependency>
             <groupId>io.github.mooy1</groupId>
             <artifactId>InfinityExpansion</artifactId>
-            <version>d995144</version>
+            <version>vMODIFIED</version>
             <scope>provided</scope>
         </dependency>
         
@@ -144,7 +144,7 @@
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>1.8</version>
+            <version>3.1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

@@ -50,7 +50,7 @@ public class AngelGem extends SlimefunItem implements NotPlaceable, Listener {
         return (e, p, itemEntity) -> {
             ItemStack item = itemEntity.getItemStack();
             if (e.getPlayer().getGameMode() != GameMode.CREATIVE && item.getType() == Items.ANGEL_GEM.stack().getType()
-                    && SlimefunUtils.isItemSimilar(item, Items.ANGEL_GEM.stack(), false, false)) {
+                    && SlimefunUtils.isItemSimilar(item, Items.ANGEL_GEM.stack().item(), false, false)) {
                 e.getPlayer().setFlying(false);
                 e.getPlayer().setAllowFlight(false);
                 e.getPlayer().setFlySpeed(0.1f);

@@ -176,7 +176,7 @@ public abstract class AbstractGenerator extends AbstractContainer implements Mac
                         return getEnergyProduction();
                     }                    
                 } else {
-                    menu.replaceExistingItem(22, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ")); 
+                    menu.replaceExistingItem(22, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ")); 
 
                     boolean isFinished = onFuelFinish(menu, new ItemStack[] { currentOp.getIngredient() }); 
                     if (isFinished) {

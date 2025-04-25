@@ -46,7 +46,7 @@ public class DimensionalHome extends SlimefunItem {
                 ItemStack item = e.getItem();
                 int chunkKey = PersistentDataAPI.getInt(item.getItemMeta(), CHUNK_KEY);
 
-                if (SlimefunUtils.isItemSimilar(item, Items.DIMENSIONAL_HOME.stack(), true)) {
+                if (SlimefunUtils.isItemSimilar(item, Items.DIMENSIONAL_HOME.stack().item(), true)) {
                     if (chunkKey > 0) {
                         if (p.getLocation().getWorld() != DIM_HOME_WORLD) {
                             Location dimHomeLocation = new Location(DIM_HOME_WORLD, 16 * chunkKey + 8d, 65, 8);

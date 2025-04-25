@@ -79,7 +79,7 @@ public abstract class AbstractMachine extends AbstractTickingContainer implement
                     processor.updateProgressBar(menu, getProgressSlot(), currentOp); 
                     currentOp.addProgress(1);
                 } else {
-                    menu.replaceExistingItem(getProgressSlot(), new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ")); 
+                    menu.replaceExistingItem(getProgressSlot(), CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ")); 
 
                     boolean isFinished = onCraftFinish(menu, currentOp.getIngredients()); 
                     if (isFinished) {

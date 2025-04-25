@@ -104,7 +104,7 @@ public class BandaidManager extends AbstractElectricMachine {
             preset.addItem(slot, ChestMenuUtils.getOutputSlotTexture(), ChestMenuUtils.getEmptyClickHandler());
         }
 
-        preset.addItem(getProgressSlot(), new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "),
+        preset.addItem(getProgressSlot(), CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "),
                 ChestMenuUtils.getEmptyClickHandler());
 
         for (int slot : getOutputSlots()) {
@@ -137,10 +137,10 @@ public class BandaidManager extends AbstractElectricMachine {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> display = new ArrayList<>();
 
-        display.add(Items.ITEM_BAND_HASTE.stack());
-        display.add(new CustomItemStack(Material.IRON_PICKAXE, "Any Tool"));
-        display.add(Items.ITEM_BAND_HEALTH.stack());
-        display.add(new CustomItemStack(Material.IRON_PICKAXE, "Any Tool"));
+        display.add(Items.ITEM_BAND_HASTE.stack().item());
+        display.add(CustomItemStack.create(Material.IRON_PICKAXE, "Any Tool"));
+        display.add(Items.ITEM_BAND_HEALTH.stack().item());
+        display.add(CustomItemStack.create(Material.IRON_PICKAXE, "Any Tool"));
 
         return display;
     }

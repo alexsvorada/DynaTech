@@ -31,7 +31,7 @@ public class HydroGenerator extends SlimefunItem {
             public void onPlayerBreak(BlockBreakEvent event, ItemStack arg1, List<ItemStack> arg2) {
                 arg2.clear();
                 event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(),
-                        Items.DEGRADED_WATER_MILL.stack());
+                        Items.DEGRADED_WATER_MILL.stack().item());
             }
         };
     }

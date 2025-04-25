@@ -71,7 +71,7 @@ public class StardustReactor extends AbstractGenerator {
             preset.addItem(slot, ChestMenuUtils.getOutputSlotTexture(), ChestMenuUtils.getEmptyClickHandler());
         }
 
-        preset.addItem(22, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "),
+        preset.addItem(22, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "),
                 ChestMenuUtils.getEmptyClickHandler());
         for (int slot : getOutputSlots()) {
             preset.addMenuClickHandler(slot, new ChestMenu.AdvancedMenuClickHandler() {

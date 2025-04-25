@@ -103,7 +103,7 @@ public class Orechid extends AbstractElectricTicker implements RecipeDisplayItem
      * For Slimefun items
      */
     public static void registerOre(@Nonnull Material from, @Nonnull SlimefunItemStack result, float weight) {
-        oreMap.computeIfAbsent(from, k -> new RandomizedSet<>()).add(result, weight);
+        oreMap.computeIfAbsent(from, k -> new RandomizedSet<>()).add(result.item(), weight);
     }
 
     private static void registerDefaultOres() {

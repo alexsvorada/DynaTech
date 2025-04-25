@@ -42,7 +42,7 @@ public class Scoop extends SlimefunItem implements Rechargeable, NotPlaceable {
 
             if (entity instanceof Bee) {
 
-                entity.getWorld().dropItemNaturally(entity.getLocation(), Items.BEE.stack());
+                entity.getWorld().dropItemNaturally(entity.getLocation(), Items.BEE.stack().item());
                 entity.remove();
                 removeItemCharge(item, 8);
 

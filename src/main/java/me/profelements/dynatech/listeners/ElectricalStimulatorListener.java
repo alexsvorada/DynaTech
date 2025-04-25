@@ -48,7 +48,7 @@ public class ElectricalStimulatorListener implements Listener {
 
         for (ItemStack item : p.getInventory().getStorageContents()) {
             if (item != null && item.getType() == electricalStimulator.getItem().getType()
-                    && SlimefunUtils.isItemSimilar(item, Items.ELECTRICAL_STIMULATOR.stack(), false, false)
+                    && SlimefunUtils.isItemSimilar(item, Items.ELECTRICAL_STIMULATOR.stack().item(), false, false)
                     && ChargeUtils.getCharge(item.getItemMeta()) > electricalStimulator.getEnergyComsumption()) {
                 if (SlimefunUtils.canPlayerUseItem(p, item, true)) {
                     p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_BURP, 1F, 1F);

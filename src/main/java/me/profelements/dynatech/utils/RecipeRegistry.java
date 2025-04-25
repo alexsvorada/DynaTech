@@ -2,6 +2,7 @@ package me.profelements.dynatech.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.bukkit.NamespacedKey;
@@ -35,7 +36,8 @@ public class RecipeRegistry {
     }
 
     public final Recipe getRecipeByKey(NamespacedKey key) {
-        return getRecipes().stream().filter(r -> r.getKey().equals(key)).toList().get(0);
+        List<Recipe> matches = getRecipes().stream().filter(r -> r.getKey().equals(key)).collect(Collectors.toList());
+        return matches.isEmpty() ? null : matches.get(0);
     }
 
     public final Stream<Recipe> getRecipesByRecipeType(RecipeType type) {
@@ -56,7 +58,7 @@ public class RecipeRegistry {
 
     public final boolean isMatching(RecipeType type, ItemStack[] input, ItemStack output) {
         List<Recipe> recipes = getRecipesByRecipeType(type).filter(r -> r.getOutput().equals(output))
-                .filter(r -> r.getInput().equals(input)).toList();
+                .filter(r -> r.getInput().equals(input)).collect(Collectors.toList());
         return !recipes.isEmpty();
     }
 
